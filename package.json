@@ -4,7 +4,10 @@
   "description": "Using apollo to consume rest api's",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "----- DOCKER HELPERS -----": "",
+    "delete-all": "yarn delete-containers && yarn delete-images",
+    "delete-containers": "docker container stop $(docker container ls -qa) && docker container rm $(docker container ls -qa)",
+    "delete-images": "docker image rm $(docker image ls -q)"
   },
   "repository": {
     "type": "git",
