@@ -5,10 +5,10 @@ services:
     working_dir: /app
     build:
       context: ./
-      dockerfile: ./infra/dev/Dockerfile
+      dockerfile: ./infra/development/Dockerfile
     volumes:
       - ./:/app
     env_file:
-      - ./infra/dev/.env
+      - ./infra/development/.env
     ports:
       - "3000:3000"

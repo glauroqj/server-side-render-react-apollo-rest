@@ -7,8 +7,9 @@ import { ApolloClient } from 'apollo-client'
 import { RestLink } from 'apollo-link-rest'
 import { StaticRouter } from 'react-router'
 import { InMemoryCache } from 'apollo-cache-inmemory'
+/** layout */
+import Layout from 'routes/Layout'
 /** style */
-import Layout from '../routes/Layout'
 import { ThemeProvider } from 'styled-components'
 import { Reset } from 'styled-reset'
 import { GlobalStyle, Theme } from 'assets/style'
