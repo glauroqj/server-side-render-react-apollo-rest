@@ -21,7 +21,8 @@ const client = new ApolloClient({
       'Accept': 'application/json',
       'Content-Type': 'application/json;charset=utf-8'
     },
-    credentials: 'same-origin'
+    credentials: 'same-origin',
+    uri: `${process.env.API_URL}`,
   }),
   cache: new InMemoryCache().restore(window.__APOLLO_STATE__),
   // link: createHttpLink({
