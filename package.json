@@ -8,7 +8,7 @@
     "delete-all": "yarn delete-containers && yarn delete-images && yarn delete-volumes",
     "delete-containers": "docker container stop $(docker container ls -qa) && docker container rm $(docker container ls -qa)",
     "delete-images": "docker image rm $(docker image ls -q)",
-    "delete-volumes": "docker volume rm $(docker image ls -q)",
+    "delete-volumes": "docker volume rm $(docker volume ls -q)",
     "----- DOCKER DEVELOPER -----": "",
     "dev-start": "docker-compose up -d --build && docker ps && yarn dev-logs",
     "dev-stop": "docker-compose stop && docker ps",
