@@ -1,4 +1,4 @@
-import homePageController from 'server/controllers/homePageController.js'
+import homePageController from '../controllers/homePageController'
 
 export default app => {
 

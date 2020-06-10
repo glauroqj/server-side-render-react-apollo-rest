@@ -6,7 +6,7 @@ import {
 /** styles */
 import { ServerStyleSheet } from 'styled-components'
 /** layout */
-import Html from 'server/views/Html'
+import Html from '../views/Html'
 
 export default async ( req, res ) => {
   /* We are ready to render for real */

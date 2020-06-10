@@ -4,7 +4,7 @@ import { getDataFromTree } from '@apollo/react-ssr'
 /** core app */
 import createApolloClient from './middlewares/createApolloClient'
 /** server routes */
-import serverRoutes from 'server/routes/serverRoutes'
+import serverRoutes from './routes/serverRoutes'
 
 const app = new Express()
 
@@ -47,7 +47,7 @@ app.use(async (req, res, next) => {
   // })
 })
 
-app.use(() => serverRoutes(app))
+app.use((req, res, next) => {serverRoutes(app), next()} )
 
 app.listen(process.env.PORT, process.env.HOST, () => console.log( // eslint-disable-line no-console
   `< SERVER RUNNING : PORT ${process.env.PORT} : HOST ${process.env.HOST} >`
