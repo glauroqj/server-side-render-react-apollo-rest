@@ -31,35 +31,26 @@ const createButtons = (color, fontWeight) => ({
       background-color: ${color.c_main};
     }
   `,
-  // primary: `
-  //   background-color: ${color.c_mango};
-  //   color: ${color.c_mango};
-  //   border-color: ${color.c_mango};
-  //   &:hover {
-  //     color: ${color.c_grey};
-  //     border-color: ${color.c_azure};
-  //     background-color: ${color.c_azure};
-  //   }
-  // `,
-  // secondary: `
-  //   background-color: ${color.c_greyMid};
-  //   color: ${color.c_greyMid};
-  //   border-color: ${color.c_greyMid};
-  //   &:hover {
-  //     color: ${color.c_grey};
-  //     background-color: ${color.c_greyMid};
-  //   }
-  // `,
-  // success: `
-  //   background-color: ${color.c_green};
-  //   color: ${color.c_green};
-  //   border-color: ${color.c_green};
-  //   &:hover {
-  //     color: ${color.c_green};
-  //     opacity: 0.8;
-  //     background-color: ${color.c_green};
-  //   }
-  // `,
+  primary: `
+    background-color: ${color.c_main};
+    color: ${color.c_main};
+    border-color: ${color.c_main};
+    &:hover {
+      color: ${color.c_grey};
+      border-color: ${color.c_main_dark};
+      background-color: ${color.c_main_dark};
+    }
+  `,
+  secondary: `
+    background-color: ${color.c_secondary};
+    color: ${color.c_secondary};
+    border-color: ${color.c_secondary};
+    &:hover {
+      color: ${color.c_grey};
+      border-color: ${color.c_secondary_dark};
+      background-color: ${color.c_secondary_dark};
+    }
+  `,
   contained: `
     color: white;
     &:hover {

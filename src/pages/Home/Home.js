@@ -1,7 +1,8 @@
 import React from 'react'
-// import { useQuery } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
+/** style */
+import * as El from './Home.style'
 
 const GET_DATA = gql`
   query GetHomeData {
@@ -18,26 +19,26 @@ const GET_DATA = gql`
 `
 
 const Home = () => {
-  const {
-    loading,
-    error,
-    data
-  } = useQuery(
-    GET_DATA, 
-    { variables: '' },
-    { fetchPolicy: 'cache-and-network' }
-  )
+  // const {
+  //   loading,
+  //   error,
+  //   data
+  // } = useQuery(
+  //   GET_DATA, 
+  //   { variables: '' },
+  //   { fetchPolicy: 'cache-and-network' }
+  // )
   
   
-  if (loading) return <h2>Loading...</h2>
-  if (error) return <p>ERROR: {error.message}</p>
+  // if (loading) return <h2>Loading...</h2>
+  // if (error) return <p>ERROR: {error.message}</p>
 
-  console.log('< DATA > ', data)
+  // console.log('< DATA > ', data)
 
   return (
-    <div>
+    <El.HomeContainer>
       HOME
-    </div>
+    </El.HomeContainer>
   )     
 }
 

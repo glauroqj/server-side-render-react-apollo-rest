@@ -1,5 +1,5 @@
-import Home from 'pages/Home'
-import PlayerStatus from 'pages/PlayerStatus'
+import Home from 'pages/Home/Home'
+import PlayerStatus from 'pages/PlayerStatus/PlayerStatus'
 
 const routes = [
   {
