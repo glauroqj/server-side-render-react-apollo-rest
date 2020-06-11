@@ -7,11 +7,14 @@ export const FormHomeContainer = styled.div`
 `
 export const FormBox = styled.div`
   width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 
   > h5 {
-    margin: 15px; 0
+    margin: 15px 0;
   }
   > button {
     margin: 15px 0;
+    justify-content: center;
   }
 `
