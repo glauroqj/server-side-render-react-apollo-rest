@@ -16,7 +16,8 @@ const Colors = {
   c_secondary_dark: '#5F5D8C',
   c_third: '#DEA862',
   c_third_dark: '#C49556',
-  c_danger: '#c0392b'
+  c_danger: '#c0392b',
+  c_grey: '#bdc3c7'
 }
 
 const Spaces = {
@@ -73,7 +74,7 @@ export const Theme = {
   space: Spaces,
   breakpoint: Breakpoints,
   color: Colors,
-  button: createButtons(Colors, FontWeight),
+  button: createButtons(Colors, FontWeight, Spaces),
   typography: {
     fontFamily: Fonts,
     fontSize: FontSize,

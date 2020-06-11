@@ -15,6 +15,7 @@ const Button = (
     disabled,
     actionClick,
     size,
+    rounded
   }) => {
 
   if (buttonLoading) return (
@@ -25,7 +26,6 @@ const Button = (
 
   return (
     <El.Button
-      id={customId}
       type="button"
       color={color}
       variant={variant}
@@ -47,11 +47,11 @@ Button.defaultProps = {
   buttonLoading: false,
   fullWidth: false,
   disabled: false,
-  loadingSize: '30px'
+  loadingSize: '30px',
+  rounded: false
 }
 
 Button.propTypes = {
-  customId: PropTypes.string,
   color: PropTypes.oneOf([
     'primary',
     'secondary',
@@ -65,8 +65,7 @@ Button.propTypes = {
   size: PropTypes.oneOf([
     'sm',
     'md',
-    'lg',
-    'xlg'
+    'lg'
   ]),
   children: PropTypes.oneOfType([
     PropTypes.string,

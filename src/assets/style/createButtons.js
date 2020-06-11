@@ -1,4 +1,4 @@
-const createButtons = (color, fontWeight) => ({
+const createButtons = (color, fontWeight, space) => ({
   base: `
     background-color: transparent;
     cursor: pointer;
@@ -24,11 +24,11 @@ const createButtons = (color, fontWeight) => ({
     }
   `,
   default: `
-    background-color: ${color.c_main};
-    border-color: ${color.c_main};
-    color: ${color.c_main};
+    background-color: ${color.cgrey};
+    border-color: ${color.cgrey};
+    color: ${color.cgrey};
     &:hover {
-      background-color: ${color.c_main};
+      background-color: ${color.cgrey};
     }
   `,
   primary: `
@@ -73,6 +73,15 @@ const createButtons = (color, fontWeight) => ({
   `,
   block: `
     width: 100%;
+  `,
+  sm: `
+    padding: ${space[8]} ${space[12]};
+  `,
+  md: `
+    padding: ${space[12]};
+  `,
+  lg: `
+    padding: ${space[16]};
   `
 })
 

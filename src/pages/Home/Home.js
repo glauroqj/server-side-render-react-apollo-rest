@@ -39,7 +39,6 @@ const Home = () => {
 
   return (
     <El.HomeContainer>
-      HOME
       <FormHome />
     </El.HomeContainer>
   )     

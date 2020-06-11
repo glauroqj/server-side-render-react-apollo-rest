@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 
 export const HomeContainer = styled.div`
   display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   height: 100vh;
   max-height: 100vh;
