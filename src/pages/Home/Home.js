@@ -3,6 +3,8 @@ import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 /** style */
 import * as El from './Home.style'
+/** components */
+import FormHome from 'components/FormHome/FormHome'
 
 const GET_DATA = gql`
   query GetHomeData {
@@ -38,6 +40,7 @@ const Home = () => {
   return (
     <El.HomeContainer>
       HOME
+      <FormHome />
     </El.HomeContainer>
   )     
 }

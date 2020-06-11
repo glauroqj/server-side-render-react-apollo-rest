@@ -5,5 +5,7 @@ export const HomeContainer = styled.div`
   width: 100%;
   height: 100vh;
   max-height: 100vh;
-  background-color: ${props => props.theme.color.c_secondary}
+  background-color: ${props => props.theme.color.c_secondary};
+  justify-content: center;
+  align-items: center;
 `

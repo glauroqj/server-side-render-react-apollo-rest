@@ -15,7 +15,8 @@ const Colors = {
   c_secondary: '#8c88cd',
   c_secondary_dark: '#5F5D8C',
   c_third: '#DEA862',
-  c_third_dark: '#C49556'
+  c_third_dark: '#C49556',
+  c_danger: '#c0392b'
 }
 
 const Spaces = {
