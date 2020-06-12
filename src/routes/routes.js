@@ -18,7 +18,7 @@ const routes = [
   {
     path: USER_PAGE_URL,
     name: 'userStatus',
-    exact: true,
+    exact: false,
     component: UserStatus,
   },
   {
