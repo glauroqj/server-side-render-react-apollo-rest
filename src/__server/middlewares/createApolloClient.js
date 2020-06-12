@@ -33,7 +33,7 @@ const createApolloClient = (req, res, next) => {
       customFetch: fetch,
       uri: `${process.env.API_URL}`,
       endpoints: {
-        home: 'https://api.opendota.com/api/players/142504352'
+        home: `${process.env.API_URL}/players/142504352`
       }
     }),
     cache: new InMemoryCache()

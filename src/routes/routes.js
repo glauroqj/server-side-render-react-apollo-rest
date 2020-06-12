@@ -1,18 +1,31 @@
+import {
+  HOME_PAGE_URL,
+  USER_PAGE_URL,
+  NOT_FOUND_URL
+} from 'configs/constants'
+
 import Home from 'pages/Home/Home'
-import PlayerStatus from 'pages/PlayerStatus/PlayerStatus'
+import UserStatus from 'pages/UserStatus/UserStatus'
+import NotFound from 'pages/NotFound/NotFound'
 
 const routes = [
   {
-    path: '/',
+    path: HOME_PAGE_URL,
     name: 'home',
     exact: true,
     component: Home,
   },
   {
-    path: '/player/:account_id',
-    name: 'playerStatus',
+    path: USER_PAGE_URL,
+    name: 'userStatus',
     exact: true,
-    component: PlayerStatus,
+    component: UserStatus,
+  },
+  {
+    path: NOT_FOUND_URL,
+    name: 'notFound',
+    exact: false,
+    component: NotFound,
   }
 ]
 

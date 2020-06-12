@@ -9,7 +9,7 @@ import { ServerStyleSheet } from 'styled-components'
 import Html from '../views/Html'
 
 export default async ( req, res ) => {
-  console.log('< HOME PAGE CONTROLLER >')
+  console.log('< USER STATUS PAGE CONTROLLER >')
   /* We are ready to render for real */
   const content = renderToString(res.App)
   /* prepare style on server */
