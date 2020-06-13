@@ -20,7 +20,7 @@ const FormHome = ({history}) => {
           onChange={ value => setInputValue(value) }
         />
         <Button
-          actionClick={() => window.location.replace(`${window.location.origin}/player/${inputValue}`) }
+          actionClick={() => window.location.replace(`${window.location.origin}/player/${inputValue}${window.location.search}`) }
           // actionClick={() => history.push(`/player/142504352`)}
           color='secondary'
           size='lg'
