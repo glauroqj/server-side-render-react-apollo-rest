@@ -8,12 +8,14 @@ import { BrowserRouter } from 'react-router-dom'
 // import fetch from 'node-fetch'
 /** apollo */
 import { ApolloProvider } from '@apollo/react-common'
-
+/** layout */
 import Layout from '../routes/Layout'
 /** style */
 import { ThemeProvider } from 'styled-components'
 import { Reset } from 'styled-reset'
 import { GlobalStyle, Theme } from 'assets/style'
+/** provider */
+import { LanguageProvider } from 'providers/Language'
 
 const client = new ApolloClient({
   link: new RestLink({
@@ -46,7 +48,9 @@ const appTree = (
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
         <Reset />
-        <Layout />
+        <LanguageProvider>
+          <Layout />
+        </LanguageProvider>
       </ThemeProvider>
     </BrowserRouter>
   </ApolloProvider>

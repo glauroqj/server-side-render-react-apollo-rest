@@ -33,7 +33,8 @@
           "pages": "./src/pages",
           "assets": "./src/assets",
           "server": "./src/server",
-          "configs": "./src/configs"
+          "configs": "./src/configs",
+          "providers": "./src/providers"
         },
         "cwd": "babelrc"
     }]

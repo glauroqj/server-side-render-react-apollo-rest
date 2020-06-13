@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
+import { withRouter } from 'react-router-dom'
 /** style */
 import * as El from './FormHome.style'
 /** components */
 import Input from 'components/Input/Input'
 import Button from 'components/Button/Button'
 
-const FormHome = () => {
+const FormHome = ({history}) => {
   const [inputValue, setInputValue] = useState('')
 
   return (
@@ -20,6 +21,7 @@ const FormHome = () => {
         />
         <Button
           actionClick={() => window.location.replace(`${window.location.origin}/player/${inputValue}`) }
+          // actionClick={() => history.push(`/player/142504352`)}
           color='secondary'
           size='lg'
         >
@@ -31,4 +33,4 @@ const FormHome = () => {
   )     
 }
 
-export default FormHome
+export default withRouter(FormHome)

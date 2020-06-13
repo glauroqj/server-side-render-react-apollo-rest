@@ -13,6 +13,8 @@ import Layout from 'routes/Layout'
 import { ThemeProvider } from 'styled-components'
 import { Reset } from 'styled-reset'
 import { GlobalStyle, Theme } from 'assets/style'
+/** provider */
+import { LanguageProvider } from 'providers/Language'
 
 const createApolloClient = (req, res, next) => {
   if (global.Headers == null) {
@@ -57,7 +59,9 @@ const createApolloClient = (req, res, next) => {
         <ThemeProvider theme={Theme}>
           <GlobalStyle />
           <Reset />
-          <Layout />
+          <LanguageProvider>
+            <Layout />
+          </LanguageProvider>
         </ThemeProvider>
       </StaticRouter>
     </ApolloProvider>
