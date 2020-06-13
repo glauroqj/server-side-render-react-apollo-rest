@@ -1,14 +1,14 @@
 import React from 'react'
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
-import { useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 /** style */
 import * as El from './UserProfile.style'
 
 const UserProfile = () => {
-  const { search } = useLocation()
-  const accountID = new URLSearchParams(search).get('id')
-  console.log('< ACCOUNT ID > ', accountID )
+  const { accountId } = useParams()
+  // const accountID = new URLSearchParams(search).get('id')
+  console.log('< ACCOUNT ID > ', accountId )
 
   const GET_DATA = gql`
     query GetHomeData {
@@ -29,7 +29,7 @@ const UserProfile = () => {
     data
   } = useQuery(
     GET_DATA, 
-    { variables: { id: accountID } },
+    { variables: { id: accountId } },
     { fetchPolicy: 'cache-and-network' }
   )
   
@@ -39,11 +39,11 @@ const UserProfile = () => {
   console.log('< DATA > ', data.dataLayoutPage)
 
   const { profile } = data.dataLayoutPage
-
+  
   return (
     <El.UserProfileContainer>
-      {/* <img src={profile.avatar} />
-      <div>{profile.personaname}</div> */}
+      <img src={profile.avatar} />
+      <div>{profile.personaname}</div>
     </El.UserProfileContainer>
   )     
 }
