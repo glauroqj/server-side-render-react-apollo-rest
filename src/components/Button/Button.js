@@ -25,7 +25,7 @@ const Button = (
   )
 
   return (
-    <El.Button
+    <El.Button 
       type="button"
       color={color}
       variant={variant}
