@@ -39,7 +39,7 @@
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
     "apollo-link-rest": "0.7.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^15.1.0",
     "graphql-anywhere": "^4.2.7",
     "graphql-tag": "^2.10.3",
